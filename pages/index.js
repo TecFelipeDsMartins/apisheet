@@ -7,7 +7,7 @@ export default function Home() {
   const [dados, setDados] = useState([]);
 
   async function pegarDados(){
-    const res = await fetch('http://localhost:3000/api/hello')
+    const res = await fetch('https://apisheet.vercel.app/api/hello')
     const dados = await res.json()
     dados.data.forEach(element => {
       console.log(element.basica)
