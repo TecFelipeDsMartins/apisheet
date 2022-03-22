@@ -13,7 +13,7 @@ async function hello (req, res) {
   const dados = await fetch("https://v1.nocodeapi.com/felipedsmartins/google_sheets/CfihZfsZfyUBuNQT?tabId=perguntas", requestOptions)
   const dadosJason = await dados.json()
    
-  res.setHeader('Content-Type', 's-maxage=10, stale-while-revalidate');
+  res.setHeader('Content-Type', 's-maxage=10000000, stale-while-revalidate');
 
   res.json(dadosJason)
   console.log(dadosJason.data)
